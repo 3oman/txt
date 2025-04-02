@@ -1,26 +1,21 @@
 import requests
 
-url = "https://www.instagram.com/async/wbloks/fetch/"
-
-params = {
-  'appid': "com.instagram.privacy.activity_center.liked_media_screen",
-  'type': "app",
-  '__bkv': "0d99de0d13662a50e0958bcb112dd651f70dea02e1859073ab25f8f2a477de96"
-}
+url = "https://www.instagram.com/graphql/query"
 
 payload = {
+  'av': "17841408504081954",
   '__d': "www",
   '__user': "0",
   '__a': "1",
-  '__req': "37",
+  '__req': "4d",
   '__hs': "20180.HYP:instagram_web_pkg.2.1...1",
   'dpr': "2",
   '__ccg': "GOOD",
   '__rev': "1021492660",
-  '__s': "466m71:drvmcv:nka7c1",
+  '__s': "yxd2mn:drvmcv:nka7c1",
   '__hsi': "7488734820120601623",
-  '__dyn': "7xeUjG1mxu1syUbFp41twpUnwgU7SbzEdF8aUco2qwJxS0k24o0B-q1ew6ywaq0yE462mcw5Mx62G5UswoEcE7O2l0Fwqo31w9a9waOfK0EUjwGzEaE2iwNwmE2eUlwhEe87q0raazo7u3C2u2J0bS1LwTwKG1pg2fwxyo6O1FwlA3a3zhA6bwg8rAwCAxW1oxe17wcObyohw",
-  '__csr': "gB0Q_4n4OLbkA_tRQy_LkydqOYDSsyhfltWl6jgkIPQq46DljsyLW-8Kh_l5h3LgzEx93daF7FWGKA9CRQAXyeimG-QAt12l6CVaX_AO7jzOd9qJqCAhumnWGlfGEGKmVyBK5EKicpbBQjKm4rF7yQU8QmfQEOjh89GAyUCnAAx69ABDyosDByrCzo01eXU2Ez205Lw2AU2dxJ0hU690nEEEa8eE1Bp8ao3iw18y04983RgjxCvwbi58bUS3q2Cq08vzUja2ytpck0arp9QawKwdyuAbwzo8E-0wo0TugBwsrpkmtkkk01E7w15S0p6",
+  '__dyn': "7xeUjG1mxu1syUbFp41twpUnwgU7SbzEdF8aUco2qwJxS0k24o0B-q1ew6ywaq0yE462mcw5Mx62G5UswoEcE7O2l0Fwqo31w9a9wtUd8-U2zxe2GewGw9a361qw8Xxm16wUwtE1IEGdwtUeo9UaQ0Lo6-3u2WE5B08-269wr86C1mgcEed6goK10xKi2qi7E5y4U4u1KwnoK9x60gm",
+  '__csr': "gB0RYhsjaYJijZTnib-Zi8RHbOvpsyhfltWl6jgkIPQq46DljsyLW-8Kh_l5h3LgzEx93daF7FWGKA9CRQAXyeimG-QAt12l6CVaX_AO7jzOd9qJqCAhumnWGlfGEGKmVyBK5EKicpbBQjKm4rF7yQU8QmfQEOjh89GAyUCnAAx69ABDyosDByrCzo01eXU2Ez205Lw2AU2dxJ0hU690nEEEa8eE1Bp8ao3iw18y04983RgjxCvwbi58bUS3q2Cq08vzUja2ytpck0arp9QawKwdyuAbwzo8E-0wo0TugBwsrpkmtkkk01E7w15S0p6",
   '__comet_req': "7",
   'fb_dtsg': "NAcMOcKFzMqD2_w32Yg6zE2N1Bvg8YoRTn1ZapA1ObbFOnK3rKx6BBw:17854477105113577:1741372604",
   'jazoest': "26076",
@@ -28,20 +23,30 @@ payload = {
   '__spin_r': "1021492660",
   '__spin_b': "trunk",
   '__spin_t': "1743606948",
-  'params': "{}"
+  'fb_api_caller_class': "RelayModern",
+  'fb_api_req_friendly_name': "usePolarisLikeMediaUnlikeMutation",
+  'variables': "{\"media_id\":\"319397579\",\"container_module\":\"single_post\",\"inventory_source\":null,\"ranking_info_token\":null,\"nav_chain\":\"PolarisProfilePostsTabRoot:profilePage:4:topnav-link,PolarisAccountSettingsRoot:accountSettingsPage:5:unexpected,PolarisYourActivityRoot:yourActivity:6:unexpected,PolarisYourActivityInteractionsRoot:yourActivityInteractionsPage:7:unexpected,PolarisYourActivityInteractionsRoot:yourActivityInteractionsPage:8:unexpected,PolarisMobilePostRoot:postPage:9:unexpected\"}",
+  'server_timestamps': "true",
+  'doc_id': "8525474704176507"
 }
 
 headers = {
   'User-Agent': "Mozilla/5.0 (iPhone; CPU iPhone OS 17_6_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Mobile/15E148 Safari/604.1",
+  'referer': "https://www.instagram.com/p/TCZ7L",
+  'x-ig-app-id': "1217981644879628",
+  'x-fb-lsd': "oNdCliWEaV6Pfj2j2u5Rav",
+  'x-asbd-id': "359341",
+  'x-csrftoken': "WfIOj65RC3jcryeCjTKzF9UiGzgncrOQ",
+  'origin': "https://www.instagram.com",
+  'sec-fetch-dest': "empty",
+  'x-bloks-version-id': "0d99de0d13662a50e0958bcb112dd651f70dea02e1859073ab25f8f2a477de96",
   'sec-fetch-site': "same-origin",
+  'x-fb-friendly-name': "usePolarisLikeMediaUnlikeMutation",
   'accept-language': "ar",
   'sec-fetch-mode': "cors",
-  'origin': "https://www.instagram.com",
-  'referer': "https://www.instagram.com/your_activity/interactions/likes",
-  'sec-fetch-dest': "empty",
-  'Cookie': "wd=414x823; csrftoken=WfIOj65RC3jcryeCjTKzF9UiGzgncrOQ; ds_user_id=8495635469; rur=\"CCO\\0548495635469\\0541775144356:01f778d1a7353e7d4847571a39cad4b5421cb1cafda53ff602bfc815201c5dd66be99d20\"; sessionid=8495635469%3AlJA0TMczXB4yJg%3A23%3AAYcJUAe8TKZwuQicyBgTPu3K3EJPr3wvRCq6Qj2q9A; mid=Z-Qv-AAAAAHP2L4ewk9CRuSGXSpZ; dpr=2; ps_l=1; ps_n=1; ig_did=9DBF22FB-1685-4A2D-93E2-585C65230D30; ig_nrcb=1; datr=VTGzZ8WA5vonCRt3kaRNIzud"
+  'Cookie': "wd=414x707; csrftoken=WfIOj65RC3jcryeCjTKzF9UiGzgncrOQ; ds_user_id=8495635469; rur=\"CCO\\0548495635469\\0541775144356:01f778d1a7353e7d4847571a39cad4b5421cb1cafda53ff602bfc815201c5dd66be99d20\"; sessionid=8495635469%3AlJA0TMczXB4yJg%3A23%3AAYcJUAe8TKZwuQicyBgTPu3K3EJPr3wvRCq6Qj2q9A; mid=Z-Qv-AAAAAHP2L4ewk9CRuSGXSpZ; dpr=2; ps_l=1; ps_n=1; ig_did=9DBF22FB-1685-4A2D-93E2-585C65230D30; ig_nrcb=1; datr=VTGzZ8WA5vonCRt3kaRNIzud"
 }
 
-response = requests.post(url, params=params, data=payload, headers=headers)
+response = requests.post(url, data=payload, headers=headers)
 
 print(response.text)
